@@ -1,0 +1,633 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8f0df">
+
+<title>Anvi & Vallabh | Wedding Invitation</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body data-theme="full">
+
+<div class="background-scene">
+    <div class="bg-par"></div>
+    <div class="bg-glow"></div>
+    <div class="bg-vignette"></div>
+</div>
+
+<canvas id="petalCanvas"></canvas>
+
+<div class="scroll-progress">
+    <div class="bar" id="scrollProgressBar"></div>
+</div>
+
+<div class="shell">
+
+<div class="frame">
+
+<!-- INVITATION PAGE -->
+
+<div id="page">
+
+<section class="hero" id="top">
+
+    <div class="hero-light"></div>
+
+    <div class="hero-center">
+
+        <div class="monogram">
+            <span>A</span>
+            <span>&</span>
+            <span>V</span>
+        </div>
+
+        <p class="hero-kicker">
+            Together with their families
+        </p>
+
+        <h1 class="hero-title">
+            Anvi <span>&</span> Vallabh
+        </h1>
+
+        <p class="hero-copy">
+            Invite you to be part of their cherished moments,
+            celebrations, and the beginning of forever.
+        </p>
+
+        <div class="hero-date">
+            <span>18 NOVEMBER</span>
+            <i>✦</i>
+            <span>25 NOVEMBER 2026</span>
+        </div>
+
+        <div class="countdown-box">
+            <p>Counting down to forever</p>
+
+            <div class="countdown">
+
+                <div>
+                    <strong id="days">00</strong>
+                    <small>Days</small>
+                </div>
+
+                <div>
+                    <strong id="hours">00</strong>
+                    <small>Hours</small>
+                </div>
+
+                <div>
+                    <strong id="minutes">00</strong>
+                    <small>Minutes</small>
+                </div>
+
+                <div>
+                    <strong id="seconds">00</strong>
+                    <small>Seconds</small>
+                </div>
+
+            </div>
+        </div>
+
+        <a href="#portrait" class="explore-btn">
+            Explore Invitation ↓
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- COUPLE PORTRAIT -->
+
+<section class="portrait reveal" id="portrait">
+
+    <div class="portrait-inner">
+
+        <div class="section-kicker">
+            A BEAUTIFUL BEGINNING
+        </div>
+
+        <figure class="portrait-fig">
+
+            <div class="portrait-arch">
+
+                <img
+                    src="assets/couple-terrace-sunset.png"
+                    alt="Anvi and Vallabh wedding illustration"
+                    loading="lazy"
+                    onerror="this.style.display='none';this.parentElement.classList.add('image-placeholder')"
+                >
+
+                <div class="placeholder-text">
+                    Add your couple illustration here
+                </div>
+
+            </div>
+
+        </figure>
+
+        <h2 class="script-heading">
+            Two hearts, one journey
+        </h2>
+
+        <p class="portrait-copy">
+            Some stories are written in the stars.
+            Some journeys begin with a single beautiful moment.
+            Ours begins with the blessings of our families
+            and the promise of forever.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- FESTIVITIES / EVENTS SECTION -->
+
+<section class="section festivities-section" id="eventsSection">
+
+    <div class="festivities-heading reveal">
+
+        <div class="section-kicker" id="eventsKicker">
+            Festivities
+        </div>
+
+        <h2 class="section-title">
+            A Week Of Celebrations
+        </h2>
+
+        <p id="eventsCopy">
+            Each moment is a celebration, woven together by
+            love, tradition and family.
+        </p>
+
+    </div>
+
+    <!-- Event timeline -->
+    <div class="events">
+
+        <div class="timeline" id="eventCards">
+            <!-- Existing JavaScript generates event cards here -->
+        </div>
+
+    </div>
+
+    <!-- Itinerary actions -->
+    <div class="itinerary-bar reveal" id="itineraryActions">
+
+        <button class="btn" id="packageCalendarBtn" type="button">
+            Add All to Calendar
+        </button>
+
+        <a class="btn" id="packageMapsBtn"
+           href="https://www.google.com/maps/search/?api=1&query=Hyderabad"
+           target="_blank" rel="noopener">
+            Open Map
+        </a>
+
+        <button class="btn" id="itineraryDownloadBtn" type="button">
+            Download Itinerary
+        </button>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- RSVP -->
+
+<section class="rsvp-shell" id="rsvpSection">
+
+    <div class="rsvp-card reveal">
+
+        <div class="rsvp-intro">
+
+            <div class="section-kicker" id="rsvpKicker">
+                KINDLY RESPOND
+            </div>
+
+            <h2 class="section-title" id="rsvpTitle">
+                Will you join us?
+            </h2>
+
+            <p id="rsvpCopy">
+                We'd love to know you'll be there.
+                Your response helps us plan each celebration.
+            </p>
+
+            <p class="quiet-line" id="rsvpDeadline">
+                Kindly respond by November 15, 2026.
+            </p>
+
+        </div>
+
+
+        <!-- Guest identification -->
+
+        <div id="rsvpIdentify" class="form">
+
+            <div class="rsvp-note" id="identifyIntro">
+                Enter your WhatsApp number to get started.
+            </div>
+
+            <div class="field">
+
+                <label for="identifyPhone">
+                    Your WhatsApp number
+                </label>
+
+                <input
+                    id="identifyPhone"
+                    type="tel"
+                    placeholder="+91 98765 43210"
+                    autocomplete="tel"
+                >
+
+            </div>
+
+            <div class="submit-row">
+
+                <button class="btn primary" id="identifyBtn">
+                    Continue
+                </button>
+
+                <div class="error" id="identifyError"></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RSVP FORM -->
+
+        <div id="rsvpForm" class="form" hidden>
+
+            <div class="field">
+
+                <label for="rsvpNameInput">
+                    Your name
+                </label>
+
+                <input
+                    id="rsvpNameInput"
+                    type="text"
+                    placeholder="First and last name"
+                    autocomplete="name"
+                >
+
+            </div>
+
+            <div class="field">
+
+                <label for="rsvpPhone">
+                    Best number to reach you
+                </label>
+
+                <input
+                    id="rsvpPhone"
+                    type="tel"
+                    placeholder="Phone number"
+                >
+
+            </div>
+
+            <div class="field">
+
+                <label for="rsvpEmail">
+                    Email address (optional)
+                </label>
+
+                <input
+                    id="rsvpEmail"
+                    type="email"
+                    placeholder="Email address"
+                >
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Party size</label>
+
+                <div class="stepper">
+
+                    <button type="button" id="partyMinus">−</button>
+
+                    <div id="rsvpParty">1</div>
+
+                    <button type="button" id="partyPlus">+</button>
+
+                </div>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>At a glance</label>
+
+                <div class="response-summary" id="responseSummary">
+                    Joining the celebrations
+                </div>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Your plans for each celebration</label>
+
+                <div class="event-select-intro">
+                    Choose Yes, No or Maybe for each event.
+                </div>
+
+                <div id="eventSelectGrid"></div>
+
+                <button
+                    type="button"
+                    class="btn"
+                    id="declineAllBtn">
+                    Can't make it to any?
+                </button>
+
+            </div>
+
+
+            <div class="field">
+
+                <label for="rsvpNotes">
+                    Notes
+                </label>
+
+                <textarea
+                    id="rsvpNotes"
+                    rows="3"
+                    placeholder="Dietary needs, accessibility, travel plans or anything you'd like us to know."
+                ></textarea>
+
+            </div>
+
+
+            <div class="submit-row">
+
+                <button class="btn primary" id="rsvpBtn">
+                    Send my RSVP
+                </button>
+
+                <div class="error" id="rsvpError"></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RSVP SUCCESS -->
+
+        <div id="rsvpSuccess" class="success" hidden>
+
+            <div class="confetti-container" id="confettiContainer"></div>
+
+            <div class="success-checkmark">✓</div>
+
+            <strong id="rsvpSuccessTitle">
+                Thank you!
+            </strong>
+
+            <p id="rsvpSuccessBody">
+                We've received your response and can't wait
+                to celebrate with you.
+            </p>
+
+            <button class="btn" id="rsvpCalendarBtn">
+                Add to Calendar
+            </button>
+
+            <button class="btn" id="updateRsvpBtn">
+                Update my response
+            </button>
+
+        </div>
+
+        <div id="rsvpDisabled" class="disabled" hidden>
+            <strong>Responses are now closed</strong>
+            <p>Please reach out to us directly.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+<!-- INTERACTIVE DRAG TO UNITE -->
+
+<section class="journey-section reveal" id="journeySection">
+
+    <div class="section-head">
+        <div class="section-kicker">A LITTLE JOURNEY</div>
+        <h2 class="section-title">Two paths, one beautiful story</h2>
+        <p>Bring them together and let the magic begin.</p>
+    </div>
+
+    <div class="unite-card" id="uniteCard">
+
+        <svg class="unite-scene"
+             viewBox="0 0 800 260"
+             role="img"
+             aria-label="Two travellers journey towards each other">
+
+            <defs>
+                <linearGradient id="uniteSky"
+                    x1="0" y1="0" x2="0" y2="1">
+
+                    <stop id="uniteSkyTop"
+                          offset="0"
+                          stop-color="#fbd9c0"/>
+
+                    <stop id="uniteSkyBottom"
+                          offset="1"
+                          stop-color="#fdeede"/>
+                </linearGradient>
+            </defs>
+
+            <rect width="800" height="260" fill="url(#uniteSky)"/>
+
+            <circle id="uniteSun"
+                    cx="400" cy="170" r="34"
+                    fill="#f2b45a" opacity=".7"/>
+
+            <polygon points="0,130 400,205 400,260 0,260"
+                     fill="#fffaf0"/>
+
+            <rect x="400" y="205" width="400" height="55"
+                  fill="#6fb3b3"/>
+
+            <path d="M410 222q20-8 40 0t40 0 40 0 40 0 40 0 40 0 40 0 40 0"
+                  stroke="#fff" stroke-opacity=".6"
+                  fill="none" stroke-width="2"/>
+
+            <!-- Pier -->
+            <rect x="376" y="196" width="48" height="8" fill="#a8742f"/>
+            <rect x="384" y="204" width="6" height="40" fill="#a8742f"/>
+            <rect x="410" y="204" width="6" height="40" fill="#a8742f"/>
+
+            <!-- Trees -->
+            <g fill="#4f8a6a">
+                <polygon points="60,138 72,138 66,118"/>
+                <polygon points="150,156 162,156 156,136"/>
+                <polygon points="250,174 262,174 256,154"/>
+            </g>
+
+            <!-- Skier -->
+            <g id="uniteSkier">
+                <rect x="-18" y="-2" width="38" height="4"
+                      rx="2" fill="#7a4b2a" transform="rotate(14)"/>
+                <rect x="-6" y="-34" width="12" height="26"
+                      rx="5" fill="#b8453d" transform="rotate(14)"/>
+                <circle cx="3" cy="-42" r="8" fill="#e8b08a"/>
+                <rect x="-5" y="-50" width="16" height="6"
+                      rx="3" fill="#2f4f6b"/>
+            </g>
+
+            <!-- Kayaker -->
+            <g id="uniteKayaker">
+                <path d="M-34 0q34 16 68 0l-8-9h-52z" fill="#b8453d"/>
+                <rect x="-6" y="-26" width="12" height="18"
+                      rx="5" fill="#e0a43a"/>
+                <circle cx="0" cy="-33" r="8" fill="#e8b08a"/>
+                <path d="M-9-35q9-10 18 0z" fill="#3a2a22"/>
+            </g>
+
+            <!-- Anvi and Vallabh -->
+            <g id="uniteCouple">
+                <rect x="383" y="164" width="14" height="30"
+                      rx="6" fill="#2f4f6b"/>
+                <circle cx="390" cy="156" r="9" fill="#e8b08a"/>
+
+                <rect x="405" y="166" width="14" height="28"
+                      rx="6" fill="#c2455f"/>
+                <circle cx="412" cy="158" r="9" fill="#e8b08a"/>
+
+                <path d="M404 140c-6-8-16 0-8 8l8 7 8-7c8-8-2-16-8-8z"
+                      fill="#e26a7f"/>
+            </g>
+
+            <!-- Celebration sparkles -->
+            <g id="uniteSparkles">
+                <circle class="unite-spark" cx="300" cy="70" r="9" fill="#f6c34a"/>
+                <circle class="unite-spark" cx="400" cy="45" r="9" fill="#ee6a7b"/>
+                <circle class="unite-spark" cx="505" cy="75" r="9" fill="#7fd0d0"/>
+            </g>
+
+        </svg>
+
+        <div class="unite-content">
+
+            <h3 id="uniteTitle">Drag to bring them together</h3>
+
+            <p id="uniteHint">
+                Two different journeys. One destination. Slide to unite.
+            </p>
+
+            <input type="range"
+                   id="uniteSlider"
+                   min="0"
+                   max="1000"
+                   value="0"
+                   aria-label="Bring Anvi and Vallabh together"/>
+
+            <div class="unite-range-labels">
+                <span>Two journeys</span>
+                <span>Together forever</span>
+            </div>
+
+            <div id="uniteReveal">
+
+                <div class="unite-heart">♥</div>
+
+                <div class="unite-names">
+                    Anvi <span>&</span> Vallabh
+                </div>
+
+                <p>Two souls, one journey, forever together.</p>
+
+                <div class="unite-wedding-date">
+                    22 November 2026
+                </div>
+
+                <button type="button"
+                        class="btn primary"
+                        id="uniteRsvpButton">
+                    Celebrate With Us
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- STICKY ACTION BAR -->
+
+<div class="sticky" id="stickyBar">
+
+    <a class="btn" href="#eventsSection">
+        Events
+    </a>
+
+    <button class="btn" id="stickyCalendarBtn">
+        Calendar
+    </button>
+
+    <button class="btn primary pulse" id="stickyRsvpBtn">
+        RSVP Now
+    </button>
+
+</div>
+
+
+<!-- PHOTO LIGHTBOX -->
+
+<div class="photo-lightbox" id="photoLightbox" hidden>
+
+    <button class="lightbox-close" id="lightboxClose">
+        ×
+    </button>
+
+    <img id="lightboxImg" src="" alt="Wedding photograph">
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
