@@ -6,67 +6,69 @@
 ========================================== */
 
 const WEDDING = {
-    couple: "Anvi & Vallabh",
+    couple: "Akshay Deepak & Aditi Sajjanar",
 
-    weddingStart: "2026-11-22T12:26:00+05:30",
+    weddingStart: "2026-12-14T04:26:00+05:30",
 
     deadline: "November 15, 2026",
 
     events: [
+
         {
-    key: "haldi",
-    name: "Pellikuthuru / Haldi",
-    date: "2026-11-18",
-    time: "9:30 AM Onwards followed by lunch",
-    venue: "Gooty Farms",
-    description: "The wedding week begins with turmeric, music, and the warmth of loved ones gathering to bless the journey ahead 💛",
-    moodBoard: "Maharashtrian Muse 🌞",
-    icon: "♨"
-},
+            key: "Haldi",
+            name: "Haldi",
+            date: "2026-12-10",
+            time: "5.30 PM Onwards",
+            venue: "At Poolside ClubHouse,Phase-1 , Keerthi Richmond Villas , Hyderabad.",
+            mapUrl: "https://maps.app.goo.gl/X9X44h8UoQfuGBHE6",
+            description:
+                "The wedding week begins with turmeric, music, and the warmth of loved ones gathering to bless the journey ahead 💛"
+        },
         {
             key: "mehendi",
-            name: "Mehendi / Sangeet",
-            date: "2026-11-19",
-            time: "7:00 PM onwards",
-            venue: "Hyderabad",
+            name: "Mehendi ",
+            date: "2026-12-11",
+            time: "6:30 PM onwards",
+            venue: "At Central Park, Phase-1 , Keerthi Richmond Villas , Hyderabad.",
+            mapUrl: "https://maps.app.goo.gl/X9X44h8UoQfuGBHE6",
             description:
                 "An evening of henna, music, laughter and dance."
         },
         {
-            key: "rest",
-            name: "Rest & Refresh",
-            date: "2026-11-20",
-            time: "All day",
-            venue: "Hyderabad",
-            description:
-                "A day to relax and prepare for the celebrations."
-        },
-        {
-            key: "sreemanthpooja",
-            name: "Sreemanth Pooja / Edurukolu",
-            date: "2026-11-21",
-            time: "7:00 PM onwards",
-            venue: "Hyderabad",
-            description:
-                "A sacred ceremony of blessings and traditions."
-        },
+    key: "Pellikoduku",
+    name: "Pellikoduku ",
+    date: "2026-12-13",
+    time: "11.45 AM Onwards followed by lunch",
+    venue: "At ClubHouse , 3rd Phase , Keerthi Richmond Villas ,  Hyderabad.",
+    mapUrl: "https://maps.app.goo.gl/X9X44h8UoQfuGBHE6",
+    description: "A beautiful celebration of tradition and togetherness, as the groom prepares for his new journey with blessings, joyful rituals, music, and the love of family. 💛",
+    
+    
+},
+
+
+        
+        
+        
         {
             key: "wedding",
             name: "Wedding",
-            date: "2026-11-22",
-            time: "12:26 PM · Muhurtham",
-            venue: "Hyderabad",
+            date: "2026-12-14",
+            time: "4.26 AM · Muhurtham",
+            venue: "K. Convention , Shankarpally, Hyderabad Road, Janwada.",
+            mapUrl: "https://maps.app.goo.gl/Bt3SjJWwTrUcebsk6",
             description:
                 "Witness the vows, sacred rituals and the beginning of forever."
         },
         {
             key: "reception",
             name: "Reception",
-            date: "2026-11-25",
-            time: "7:00 PM onwards",
-            venue: "Hyderabad",
+            date: "2026-12-14",
+            time: "Followed By Lunch at 11.45 AM",
+            venue: "K. Convention , Shankarpally, Hyderabad Road, Janwada.",
+            mapUrl: "https://maps.app.goo.gl/Bt3SjJWwTrUcebsk6",
             description:
-                "An elegant evening of celebration, music and togetherness."
+    "A joyful gathering of family and friends to celebrate the newlyweds, filled with love, laughter, music, delicious food and unforgettable memories. ✨❤️"
         }
     ]
 };
@@ -545,7 +547,7 @@ function createCalendarEvent(event) {
 
     return `
 BEGIN:VEVENT
-UID:${event.key}-${event.date}@anvi-vallabh
+UID:${event.key}-${event.date}
 DTSTAMP:${toICSDate(new Date())}
 DTSTART:${toICSDate(start)}
 DTEND:${toICSDate(end)}
@@ -594,7 +596,7 @@ function downloadCalendar(events) {
     ].join("\r\n");
 
     downloadFile(
-        "Anvi-Vallabh-Wedding.ics",
+        "Wedding.ics",
         calendar,
         "text/calendar;charset=utf-8"
     );
@@ -634,7 +636,7 @@ function downloadItinerary() {
     );
 
     let content = `
-ANVI & VALLABH
+Akshay Deepak & Aditi Sajjanar
 WEDDING CELEBRATIONS
 
 November 2026
@@ -659,7 +661,7 @@ ${event.description}
     });
 
     downloadFile(
-        "Anvi-Vallabh-Itinerary.txt",
+        "Akshay Deepak & Aditi Sajjanar-Itinerary.txt",
         content,
         "text/plain;charset=utf-8"
     );
